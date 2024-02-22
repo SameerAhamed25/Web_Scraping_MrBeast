@@ -1,6 +1,7 @@
 # Web_Scraping_MrBeast
 
 > Loading Web Pages with 'request'
+>
 
 The `requests` module allows you to send HTTP requests using Python.
 The HTTP request returns a Response Object with all the response data (content, encoding, status, and so on). 
@@ -10,11 +11,13 @@ Store the status code in a variable called status
 Print txt and status using print function
 
 > Extracting title with BeautifulSoup
+>
 Use the requests package to get title of the URL
 Use BeautifulSoup to store the title of the page into a variable called page_title
 once we feed the page.content inside BeautifulSoup, we can start working with the parsed DOM tree.
 
 >  BS4 body and head
+>
 Repeat the experiment with URL
 Store page title (without calling .text) of URL in `page_title`
 Store body content (without calling .text) of URL in `page_body`
@@ -23,11 +26,14 @@ When you try to print the page_body or page_head you'll see that those are print
 But in reality, when you print(type page_body) you'll see it is not a string but it works fine.
 
 > select with BeautifulSoup
+>
+
 Once we have the soup variable, we can work with `.select` on it which is a CSS selector inside BeautifulSoup.
 Create a variable, Set it to empty list.
 Use `.select` to select all the tags and store the text of those tags inside variable list.
 
 > Select DOM elements with BeautifulSoup methods.
+> 
 scrape out their names and store them in a list called `top_items`.
 Use `.select` to extract the titles.
 Use `.select` to extract the review count label for those product titles. 
@@ -36,6 +42,7 @@ Append this dictionary in a list called `top_items`
 Print this list at the end
 
 > Extracting Links
+> 
 Extract the `href` attribute of links with their text as well. 
 You have to create a list called `Extrected_links`
 Make sure your text is stripped of any whitespace
@@ -44,6 +51,7 @@ Store all these dicts in the `extracted_links`
 Print this list at the end.
 
 > Generating CSV from data
+> 
 import requests
 from bs4 import BeautifulSoup
 import csv
